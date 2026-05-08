@@ -4,45 +4,229 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-        </div>
+        
+    <!--<div id="cursor"></div>-->
+
+    <!-- NAV -->
+    <nav>
+    <div class="nav-logo"><span>✦</span> Ana Deheza ;)</div>
+    <div class="nav-links">
+        <button class="nav-btn" onclick="scroll2('hero')">home</button>
+        <button class="nav-btn" onclick="scroll2('about')">about</button>
+        <button class="nav-btn" onclick="scroll2('projects')">projects</button>
+    </div>
     </nav>
 
-    <section id="hero" class="parallax-section">
-        <div class="content-wrapper">
-            <h1 class="pixel-text">WELCOME</h1>
-            <p>My journey</p>
+    <!-- HERO -->
+    <section id="hero">
+    <div class="hero-bg"></div>
+    <!-- floating pixel decorations -->
+    <div class="float" style="position:absolute;top:120px;right:300px;animation-delay:.4s;">
+        <svg width="16" height="16" viewBox="0 0 4 4" style="image-rendering:pixelated;">
+        <rect x="1" y="0" width="2" height="1" fill="#ffb3ce"/>
+        <rect x="0" y="1" width="4" height="2" fill="#ffb3ce"/>
+        <rect x="1" y="3" width="2" height="1" fill="#ffb3ce"/>
+        </svg>
+    </div>
+    <div class="float" style="position:absolute;top:200px;right:200px;animation-delay:1s;">
+        <svg width="12" height="12" viewBox="0 0 3 3" style="image-rendering:pixelated;">
+        <rect x="1" y="0" width="1" height="1" fill="#ff85b3"/>
+        <rect x="0" y="1" width="3" height="1" fill="#ff85b3"/>
+        <rect x="1" y="2" width="1" height="1" fill="#ff85b3"/>
+        </svg>
+    </div>
+    <div class="float" style="position:absolute;top:350px;right:260px;animation-delay:1.8s;">
+        <svg width="8" height="8" viewBox="0 0 2 2" style="image-rendering:pixelated;">
+        <rect x="0" y="0" width="2" height="2" fill="#ffd6e7"/>
+        </svg>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-tag">IT student &amp; learning web developer</div>
+        <h1 class="hero-name">Hey! I'm <span class="accent">Ana</span><br/>I build <span class="accent">fun and useful</span> websites👾 </h1>
+        <div class="hero-btns">
+        <button class="btn-primary" onclick="scroll2('projects')">side quests!</button>
+        <button class="btn-primary" onclick="scroll2('about')">about this character </button>
         </div>
+    </div>
+
+    <!-- pixel character -->
+    <div class="pixel-char">
+        <canvas id="charCanvas" width="24" height="24"></canvas>
+    </div>
+
+    <div class="scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+    </div>
     </section>
 
-    <section id="about" class="parallax-section">
-        <div class="content-wrapper">
-            <h2 class="pixel-text">ABOUT THE PLAYER</h2>
-            <div class="stats-container">
-                <!-- Stats content here -->
+    <div class="pixel-divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+    <div class="reveal">
+        <div class="section-header">
+        <div class="section-tag">✦ 01 / about me </div>
+        <h2 class="section-title">
+            a little bit <br/>
+            <span class="pixel-line">about this PJ</span>
+        </h2>
+        </div>
+        <div class="about-grid">
+        <div class="about-text">
+            <p>Hi! I'm a starting<strong> web designer</strong> who loves building webs that feel <strong>𑣲personal</strong>.</p>
+            <p>During the day, I am an <strong>IT student</strong> who tends to focus on <strong>functional</strong> coding. But when the night falls, I like making <strong>retro pixel games</strong> and <strong>cozy tool apps</strong>.</p>
+            <p>Currently open to <strong>freelance & part-time opportunities</strong> we can build something together!</p>
+            <div class="contact">
+                <h3>Contact me! ;)</h3>
+                <a href="mailto:adehezaflaherty@gmail.com" class="contacto">Gmail: adehezaflaherty@gmail.com</a>
+                <a class="contacto" href="www.linkedin.com/in/ana-deheza-flaherty-74a45a3b2">Linkedin</a>
+                <a class="contacto" href="https://github.com/anadeheza">Github</a>
+                <a class="contacto" href="https://www.instagram.com/anadehezaa/">Instagram</a>
+                <a class="contacto" href="https://vsco.co/anadehezaa/gallery">VSCO</a>
+            </div>
+            <div class="stat-row">
             </div>
         </div>
-    </section>
-
-    <section id="projects" class="parallax-section">
-        <div class="content-wrapper">
-            <h2 class="pixel-text">SIDE QUESTS</h2>
-            <div class="project-grid">
-                <!-- Project cards here -->
+        <div>
+            <div style="font-family:var(--font-pixel);font-size:8px;color:var(--mid);margin-bottom:16px;letter-spacing:1px;">// my toolkit</div>
+            <div class="skills-grid">
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">React</div>
+            <div class="skill-pill">TypeScript</div>
+            <div class="skill-pill">CSS</div>
+            <div class="skill-pill">Vite</div>
+            <div class="skill-pill">Node.js</div>
+            <div class="skill-pill">C / C#</div>
+            <div class="skill-pill">3ds Max / Unity</div>
+            <div class="skill-pill">Tailwind</div>
+            <div class="skill-pill">HTML</div>
             </div>
         </div>
+        </div>
+    </div>
     </section>
 
-    <section id="hero"> <!-- landing page --> </section>
-    <section id="about"> <!-- bio y skills --> </section>
-    <section id="projects"> <!-- proyectos --> </section>
+    <div class="pixel-divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+    <div class="reveal">
+        <div class="section-header">
+        <div class="section-tag">✦ 02 / side quests</div>
+        <h2 class="section-title">
+            My projects<br/>
+            <span class="pixel-line">made with intention </span>
+        </h2>
+        </div>
+        <div class="projects-grid">
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/habit.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">Tool web app</span>
+            <h3 class="project-title">Habit Tracker</h3>
+            <p class="project-desc">A habit-tracker app with progress tracking and an SVG tree that grows with your streak</p>
+            <p class="project-desc">Made with React + Vite + Tailwind </p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/habit-tracker">github</a>
+            <a class="project-link" href="https://anadeheza.github.io/habit-tracker/">live demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/studyo.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">Focus web app</span>
+            <h3 class="project-title">Studyō</h3>
+            <p class="project-desc"> A simple focus web app where you can set a timer to work/study with background music and a resting time, along with setting tasks in a to-do list and deadlines in a calendar</p>
+            <p class="project-desc">Made with HTML, CSS and JavaScript</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/study-app">github</a>
+            <a class="project-link" href="https://anadeheza.github.io/study-app/">live demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/anisOS.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">Web OS</span>
+            <h3 class="project-title">AniOS</h3>
+            <p class="project-desc">My very first Web deployable OS with apps like weather, calculator and games, with date, time and system information</p>
+            <p class="project-desc">Made with HTML, CSS and JavaScript</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/anisOS">github</a>
+            <a class="project-link" href="https://anadeheza.github.io/anisOS/">live demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/pixelart.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">Collaborative web</span>
+            <h3 class="project-title">Pixel Art Collab</h3>
+            <p class="project-desc">A collaborative pixel art web app to paint and chat with friends / coworkers</p>
+            <p class="project-desc">Made with  React + Vite + Tailwind and Socket.io</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/PixelArtCollab">github</a>
+            <a class="project-link" href="https://anadeheza.github.io/PixelArtCollab/">live demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/todo.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">VS code tool</span>
+            <h3 class="project-title">To-Do Highlighter</h3>
+            <p class="project-desc">A VS Code extension with customizable keywords to organize tasks</p>
+            <p class="project-desc">Made with TypeScript</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/To-do-Highlight">github</a>
+            <a class="project-link" href="https://github.com/anadeheza/To-do-Highlight/releases/download/v0.0.1/to-do-highlighter-0.0.1.vsix">install</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview" style="background-image:url('assets/arcade.png');background-size:cover;background-position:center;"></div>
+            <span class="project-tag">Game developing</span>
+            <h3 class="project-title">Arcade</h3>
+            <p class="project-desc">A pink-themed web deployable arcade with some of my first projects</p>
+            <p class="project-desc">Made with HTML, CSS and JavaScript</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/arcade">github</a>
+            <a class="project-link" href="https://anadeheza.github.io/arcade/">live demo</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-preview"></div>
+            <span class="project-tag">C# project</span>
+            <h3 class="project-title">Traffic light</h3>
+            <p class="project-desc">A school project that mimics a traffic light's functions</p>
+            <p class="project-desc">Made with HTML, CSS and JavaScript</p>
+            <div class="project-links">
+            <a class="project-link" href="https://github.com/anadeheza/poo-semaforo">github</a>
+            <a class="project-link" href="https://github.com/anadeheza/poo-semaforo/blob/master/Semaforo.slnx">download</a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-strip">
+    <div>
+        <h2>let's make something<br/>cool together</h2>
+        <p>Open to freelance, part-time, and collabs.</p>
+    </div>
+    <button class="btn-white" onclick="window.location.href='mailto:adehezaflaherty@gmail.com'">say hello ᯓ➤</button>
+    </div>
+
+    <footer>
+    <span> ani.dev — 2026</span>
+    <span>made with pixels & too much coffee</span>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
