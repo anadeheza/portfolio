@@ -490,8 +490,7 @@ section{
     padding:24px;
     position:relative;
     transition:transform .15s;
-    cursor:pointer;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 

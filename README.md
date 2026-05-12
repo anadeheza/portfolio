@@ -12,4 +12,9 @@ You can access by scrolling down or by pressing either the "About this character
 ## Side Quests
 Here, you can view some of my latests projects, organized by functionality
 
-To get there scrolling further or by pressing either the "Side Quests!" button in home or the "projects" button in nav
+To get there just scroll further or press either the "Side Quests!" button in home or the "projects" button in nav
+
+## School Journey
+Here, you get to know about my journey through a technical highschool and Ensligh studies
+
+Ti get there scroll even further of press the "School Journey" button in home or the "education" button in nav
