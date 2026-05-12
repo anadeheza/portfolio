@@ -481,6 +481,41 @@ section{
     color:#fff;
 }
 
+
+/*education*/
+.school-card{
+    background:#fff;
+    border:4px dashed var(--pink2);
+    padding:24px;
+    position:relative;
+    transition:transform .15s;
+    cursor:pointer;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.school-card h2 {
+    color: var(--pink4);
+}
+
+.certifications h3 {
+    margin-top: 30px;
+}
+
+.certifications h4 {
+    margin-top: 10px;
+}
+
+.certifications a {
+    color: rgb(244, 107, 100);
+    text-decoration: none;
+}
+
+.certifications p {
+    margin-bottom: 10px;
+}
+
+
   /* pixel divider */
 .pixel-divider{
     height:4px;
