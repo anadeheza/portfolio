@@ -278,8 +278,9 @@ section{
     font-family:var(--font-pixel);
     font-size:8px;
     color:var(--pink4);
-    margin-bottom:12px;
+    margin-bottom:30px;
     letter-spacing:1px;
+
 }
 
 .section-title{
