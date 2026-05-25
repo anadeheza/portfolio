@@ -1,13 +1,10 @@
-// smooth scroll
 function scroll2(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
 
-// reveal on scroll
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// pixel character canvas
 function drawChar(){
   const c=document.getElementById('charCanvas');
   if(!c)return;
