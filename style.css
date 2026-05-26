@@ -15,15 +15,6 @@ body{
     overflow-x: hidden;
 }
 
-a {
-    color: rgb(244, 107, 100);
-    text-decoration: none;
-}
-
-a:hover {
-    color: #ca4214;
-}
-
 nav {
     position: fixed;
     top: 0;
@@ -48,11 +39,6 @@ nav {
 
 .nav-logo span{
     color: #ffc3b3;
-}
-
-.nav-links{
-    display: flex;
-    gap: 8px;
 }
 
 .nav-btn{
@@ -89,21 +75,6 @@ nav {
     opacity: 1;
 }
 
-.nav-btn:active{
-    transform: translate(0,0);
-}
-
-.nav-btn:active::after{
-    opacity: 0;
-}
-
-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 100px 48px 60px;
-}
 
 #hero{
     position: relative;
@@ -146,15 +117,6 @@ section{
     color: #f1794a;
 }
 
-.hero-sub{
-    font-size: 18px;
-    font-weight: 300;
-    color: #b6827e;
-    line-height: 1.5;
-    max-width: 480px;
-    margin-bottom: 36px;
-}
-
 .hero-btns{
     display: flex;
     gap: 16px;
@@ -165,9 +127,9 @@ section{
     font-family: 'Press Start 2P', monospace;
     font-size: 9px;
     padding: 14px 24px;
-    background: #f1794a;
+    background: #fa8a5e;
     color: white;
-    border: 2px solid #ca4214;
+    border: 2px solid #fc804f;
     cursor: pointer;
     position: relative;
     transition: transform 0.15s;
@@ -181,7 +143,7 @@ section{
     right: -4px;
     width: 100%;
     height: 100%;
-    background: #ca4214;
+    background: #ff7141;
     z-index: -1;
     transition: transform 0.15s;
 }
@@ -240,21 +202,30 @@ section{
     transform: rotate(45deg);
 }
 
+.pixel-divider{
+    height: 5px;
+    background-image: linear-gradient(to right, #ffc3b3 60%, transparent 0%);
+    background-size: 20px 5px;
+    background-position: bottom;
+}
 
-.contact {
+.reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s,transform 1s;
+}
+
+.reveal.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
-}
-
-
-.contacto {
-    margin-top: 10px;
-    margin-left: 2px;
-}
-
-#about{
-    background: #fde6df;
+    justify-content: center;
+    padding: 100px 48px 60px;
 }
 
 .section-header{
@@ -285,6 +256,19 @@ section{
     line-height: 2;
 }
 
+a {
+    color: rgb(244, 107, 100);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ca4214;
+}
+
+#about{
+    background: #fde6df;
+}
+
 .about-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -301,6 +285,17 @@ section{
 .about-text strong{
     color: #2a1520;
     font-weight: 600;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.contacto {
+    margin-top: 10px;
+    margin-left: 2px;
 }
 
 .toolkit {
@@ -349,29 +344,6 @@ section{
 
 .skill-pill:hover::after{
     opacity: 1;
-}
-
-.stat-row{
-    display: flex;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.stat{
-    text-align: center;
-}
-
-.stat-num{
-    font-family: 'Press Start 2P', monospace;
-    font-size: 18px;
-    color: #f1794a;
-    display: block;
-}
-
-.stat-label{
-    font-size: 12px;
-    color: #b6827e;
-    margin-top: 4px;
 }
 
 #projects{
@@ -425,7 +397,6 @@ section{
 .project-preview canvas{
     image-rendering: pixelated;
 }
-
 
 .project-title{
     font-size: 18px;
@@ -491,27 +462,8 @@ section{
     margin-top: 10px;
 }
 
-
 .certifications p {
     margin-bottom: 10px;
-}
-
-.pixel-divider{
-    height: 5px;
-    background-image: linear-gradient(to right, #ffc3b3 60%, transparent 0%);
-    background-size: 20px 5px;
-    background-position: bottom;
-}
-
-.reveal{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s,transform 1s;
-}
-
-.reveal.visible{
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .contact-strip{
