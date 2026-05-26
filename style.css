@@ -4,36 +4,24 @@
     box-sizing: border-box;
 }
 
-:root{
-    --pink0: #ffd3ad;
-    --pink1: #ffe3d6;
-    --pink2: #ffc3b3;
-    --pink3: #fbb77c;
-    --pink4: #f1794a;
-    --pink5: #ca4214;
-    --cream: #fff0ec;
-    --dark: #2a1520;
-    --mid: #b6827e;
-    --light: #fde6df;
-    --pixel: 2px;
-    --font-pixel: 'Press Start 2P',monospace;
-    --font-body: 'DM Sans',sans-serif;
-}
-
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background: var(--cream);
-    font-family: var(--font-body);
-    color: var(--dark);
+    background: #fff0ec;
+    font-family: 'DM Sans', sans-serif;
+    color: #2a1520;
     overflow-x: hidden;
 }
 
 a {
     color: rgb(244, 107, 100);
     text-decoration: none;
+}
+
+a:hover {
+    color: #ca4214;
 }
 
 nav {
@@ -48,18 +36,18 @@ nav {
     padding: 16px 48px;
     background: rgba(255, 251, 248, 0.85);
     backdrop-filter: blur(8px);
-    border-bottom: 2px solid var(--pink1);
+    border-bottom: 2px solid #ffe3d6;
 }
 
 .nav-logo{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 10px;
-    color: var(--pink4);
+    color: #f1794a;
     letter-spacing: 1px;
 }
 
 .nav-logo span{
-    color: var(--pink2);
+    color: #ffc3b3;
 }
 
 .nav-links{
@@ -68,12 +56,12 @@ nav {
 }
 
 .nav-btn{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 8px;
     padding: 8px 14px;
-    border: 2px solid var(--pink3);
+    border: 2px solid #fbb77c;
     background: rgba(255, 251, 248, 0.85);
-    color: var(--pink4);
+    color: #f1794a;
     cursor: pointer;
     position: relative;
     transition: all 0.15s;
@@ -86,13 +74,13 @@ nav {
     right: -4px;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--pink3);
+    border: 2px solid #fbb77c;
     opacity: 0;
     transition: all 0.15s;
 }
 
 .nav-btn:hover{
-    background: var(--pink3);
+    background: #fbb77c;
     color: white;
     transform: translate(-2px,-2px);
 }
@@ -135,11 +123,11 @@ section{
 }
 
 .hero-tag{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 8px;
-    color: var(--pink4);
-    background: var(--pink1);
-    border: 2px solid var(--pink2);
+    color: #f1794a;
+    background: #ffe3d6;
+    border: 2px solid #ffc3b3;
     padding: 6px 12px;
     display: inline-block;
     margin-bottom: 24px;
@@ -147,21 +135,21 @@ section{
 }
 
 .hero-name{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     line-height: 1.5;
     font-size: 40px;
-    color: var(--dark);
+    color: #2a1520;
     margin-bottom:15px;
 }
 
 .hero-name .accent{
-    color: var(--pink4);
+    color: #f1794a;
 }
 
 .hero-sub{
     font-size: 18px;
     font-weight: 300;
-    color: var(--mid);
+    color: #b6827e;
     line-height: 1.5;
     max-width: 480px;
     margin-bottom: 36px;
@@ -174,12 +162,12 @@ section{
 }
 
 .btn-primary{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 9px;
     padding: 14px 24px;
-    background: var(--pink4);
+    background: #f1794a;
     color: white;
-    border: 2px solid var(--pink5);
+    border: 2px solid #ca4214;
     cursor: pointer;
     position: relative;
     transition: transform 0.15s;
@@ -193,7 +181,7 @@ section{
     right: -4px;
     width: 100%;
     height: 100%;
-    background: var(--pink5);
+    background: #ca4214;
     z-index: -1;
     transition: transform 0.15s;
 }
@@ -204,21 +192,18 @@ section{
 
 .pixel-char{
     position: absolute;
-    right: 80px;
-    bottom: 80px;
-    width: 96px;
-    height: 96px;
+    right: 100px;
+    bottom: 50px;
+}
+
+.pixel-char img {
+    width: 100px;
+    height: 100px;
     image-rendering: pixelated;
-    z-index: 1;
+    image-rendering: crisp-edges;
 }
 
-.pixel-char canvas{
-    width: 96px;
-    height: 96px;
-}
-
-.float{
-    position: absolute;
+.float img {
     image-rendering: pixelated;
     animation: floatY 3s ease-in-out infinite;
 }
@@ -237,9 +222,9 @@ section{
     bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 7px;
-    color: var(--mid);
+    color: #b6827e;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,8 +235,8 @@ section{
 .scroll-arrow{
     width: 12px;
     height: 12px;
-    border-right: 2px solid var(--pink3);
-    border-bottom: 2px solid var(--pink3);
+    border-right: 2px solid #fbb77c;
+    border-bottom: 2px solid #fbb77c;
     transform: rotate(45deg);
 }
 
@@ -269,7 +254,7 @@ section{
 }
 
 #about{
-    background: var(--light);
+    background: #fde6df;
 }
 
 .section-header{
@@ -277,9 +262,9 @@ section{
 }
 
 .section-tag{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 8px;
-    color: var(--pink4);
+    color: #f1794a;
     margin-bottom: 30px;
     letter-spacing: 1px;
 
@@ -288,15 +273,15 @@ section{
 .section-title{
     font-size: 40px;
     font-weight: 600;
-    color: var(--dark);
-    font-family: var(--font-pixel);
+    color: #2a1520;
+    font-family: 'Press Start 2P', monospace;
 }
 
 .section-title .pixel-line{
     display: block;
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 18px;
-    color: var(--pink3);
+    color: #fbb77c;
     line-height: 2;
 }
 
@@ -309,19 +294,19 @@ section{
 
 .about-text p{
     font-size: 16px;
-    color: var(--mid);
+    color: #b6827e;
     margin-bottom: 16px;
 }
 
 .about-text strong{
-    color: var(--dark);
+    color: #2a1520;
     font-weight: 600;
 }
 
 .toolkit {
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 8px;
-    color: var(--dark);
+    color: #2a1520;
     margin-bottom: 16px;
     letter-spacing: 1px;
 }
@@ -333,20 +318,20 @@ section{
 }
 
 .skill-pill{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 10px;
     padding: 10px 14px;
-    border: 2px solid var(--pink2);
-    color: var(--pink5);
-    background: var(--pink0);
+    border: 2px solid #ffc3b3;
+    color: #ca4214;
+    background: #ffd3ad;
     letter-spacing: 0.4px;
     position: relative;
     transition: all 0.15s;
 }
 
 .skill-pill:hover{
-    background: var(--pink2);
-    color: var(--pink5);
+    background: #ffc3b3;
+    color: #ca4214;
     transform: translate(-2px,-2px);
 }
 
@@ -357,7 +342,7 @@ section{
     right: -3px;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--pink2);
+    border: 2px solid #ffc3b3;
     opacity: 0;
     transition: opacity 0.15s;
 }
@@ -377,20 +362,20 @@ section{
 }
 
 .stat-num{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 18px;
-    color: var(--pink4);
+    color: #f1794a;
     display: block;
 }
 
 .stat-label{
     font-size: 12px;
-    color: var(--mid);
+    color: #b6827e;
     margin-top: 4px;
 }
 
 #projects{
-    background: var(--cream);
+    background: #fff0ec;
 }
   
 .projects-grid{
@@ -401,11 +386,10 @@ section{
 
 .project-card{
     background: white;
-    border: 2px solid var(--pink1);
+    border: 2px solid #ffe3d6;
     padding: 24px;
     position: relative;
     transition: transform 0.15s;
-    cursor: pointer;
 }
 
 .project-card::after{
@@ -415,9 +399,9 @@ section{
     right: -4px;
     width: 100%;
     height: 100%;
-    background: var(--pink1);
+    background: #ffe3d6;
     z-index: -1;
-    border: 2px solid var(--pink2);
+    border: 2px solid #ffc3b3;
     transition: all 0.15s;
 }
 
@@ -428,8 +412,8 @@ section{
 .project-preview{
     width: 100%;
     height: 120px;
-    background: var(--pink0);
-    border: 2px solid var(--pink1);
+    background: #ffd3ad;
+    border: 2px solid #ffe3d6;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -446,53 +430,57 @@ section{
 .project-title{
     font-size: 18px;
     font-weight: 600;
-    color: var(--dark);
+    color: #2a1520;
     margin-bottom: 8px;
 }
 
 .project-desc{
     font-size: 13px;
-    color: var(--mid);
+    color: #b6827e;
     line-height: 1.5;
     margin-bottom: 16px;
 }
 
 .project-link{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 7px;
     padding: 8px 12px;
-    border: 2px solid var(--pink3);
-    color: var(--pink4);
+    border: 2px solid #fbb77c;
+    color: #f1794a;
     cursor: pointer;
     transition: all 0.15s;
     letter-spacing:.5px;
 }
 
 .project-link:hover{
-    background: var(--pink3);
+    background: #fbb77c;
     color: white;
 }
 
 #education {
-    background-color: var(--light);
+    background-color: #fde6df;
 }
 
 .school-card{
     background: white;
-    border: 4px dashed var(--pink2);
+    border: 4px dashed #ffc3b3;
     padding: 24px;
     position: relative;
     transition: transform 0.15s;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.school-card:hover{
+    transform: translate(-5px,-5px);
 }
 
 .school-card h2 {
-    color: var(--pink4);
+    color: #f1794a;
 }
 
 .years {
-    color: var(--pink3);
+    color: #fbb77c;
 }
 
 .certifications h3 {
@@ -510,7 +498,7 @@ section{
 
 .pixel-divider{
     height: 5px;
-    background-image: linear-gradient(to right, var(--pink2) 60%, transparent 0%);
+    background-image: linear-gradient(to right, #ffc3b3 60%, transparent 0%);
     background-size: 20px 5px;
     background-position: bottom;
 }
@@ -538,7 +526,7 @@ section{
 }
 
 .contact-strip h2{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 14px;
     color: white;
     line-height: 2;
@@ -546,16 +534,16 @@ section{
 
 .contact-strip p {
     font-size: 15px;
-    color: var(--pink1);
+    color: #ffe3d6;
     margin-top: 8px;
 }
 
 .btn-white{
-    font-family: var(--font-pixel);
+    font-family: 'Press Start 2P', monospace;
     font-size: 9px;
     padding: 14px 24px;
     background: white;
-    color: var(--pink4);
+    color: #f1794a;
     border: 2px solid white;
     cursor: pointer;
     transition: all 0.15s;
@@ -563,7 +551,7 @@ section{
 }
 
 .btn-white:hover{
-    background: var(--pink1);
+    background: #ffe3d6;
 }
 
 @media(max-width: 640px){
@@ -591,11 +579,4 @@ section{
     .pixel-divider{
         margin: 0 24px;
     }
-
-    footer{
-        padding: 24px;
-        flex-direction: column;
-        gap: 8px;
-        text-align: center;
-    }
-  }
+}
